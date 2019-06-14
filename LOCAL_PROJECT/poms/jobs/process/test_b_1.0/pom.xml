@@ -5,13 +5,13 @@
   <parent>
     <groupId>org.example.local_project</groupId>
     <artifactId>code.Master</artifactId>
-    <version>4.0.1</version>
+    <version>4.0.1-SNAPSHOT</version>
     <relativePath>../../../</relativePath>
   </parent>
   <groupId>org.example.local_project.job</groupId>
   <artifactId>TEST_B</artifactId>
-  <version>4.0.1</version>
-  <name>LOCAL_PROJECT TEST_B-4.0.1 (1.0,Job Designs)</name>
+  <version>4.0.1-SNAPSHOT</version>
+  <name>LOCAL_PROJECT TEST_B-4.0.1-SNAPSHOT (1.0,Job Designs)</name>
   <properties>
     <output.resources.dir>${talend.job.name}/src/main/resources</output.resources.dir>
     <talend.job.applyContextToChildren>false</talend.job.applyContextToChildren>
@@ -20,7 +20,7 @@
     <talend.job.version>1.0</talend.job.version>
     <talend.project.name.lowercase>local_project</talend.project.name.lowercase>
     <talend.job.path>local_project/test_b_1_0</talend.job.path>
-    <project.distribution-management.repository.id>${project.distributionManagement.repository.id}</project.distribution-management.repository.id>
+    <project.distribution-management.repository.id>${project.distributionManagement.snapshotRepository.id}</project.distribution-management.repository.id>
     <maven.build.timestamp.format>yyyy-MM-dd HHmmssSSS</maven.build.timestamp.format>
     <talend.project.name>LOCAL_PROJECT</talend.project.name>
     <talend.product.version>7.1.1.20181026_1147</talend.product.version>
@@ -36,7 +36,7 @@
     <talend.job.name>TEST_B</talend.job.name>
     <talend.job.id>_C0vQcI3REemvcrpgwt9Eng</talend.job.id>
     <talend.project.id>0</talend.project.id>
-    <project.distribution-management.repository.url>${project.distributionManagement.repository.url}</project.distribution-management.repository.url>
+    <project.distribution-management.repository.url>${project.distributionManagement.snapshotRepository.url}</project.distribution-management.repository.url>
     <talend.job.framework></talend.job.framework>
     <talend.job.folder></talend.job.folder>
     <talend.job.type>Standard</talend.job.type>
@@ -60,7 +60,7 @@
     <dependency>
       <groupId>org.example.local_project.code</groupId>
       <artifactId>routines</artifactId>
-      <version>4.0.1</version>
+      <version>4.0.1-SNAPSHOT</version>
     </dependency>
   </dependencies>
   <build>
