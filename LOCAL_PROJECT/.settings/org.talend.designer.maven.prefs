@@ -1,4 +1,3 @@
 PROJECT_GROUPID=org.example.local_project
 PROJECT_VERSION=4.0.1
-PUBLISH_AS_SNAPSHOT=true
 eclipse.preferences.version=1
