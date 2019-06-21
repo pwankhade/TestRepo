@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="testService"
+		xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+		xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:tns="http://www.talend.org/service/"
+		targetNamespace="http://www.talend.org/service/">
+
+	<wsdl:types>
+		<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+			targetNamespace="http://www.talend.org/service/">
+			<xsd:element name="testServiceOperationRequest">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="in" type="xsd:string"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="testServiceOperationResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="out" type="xsd:string"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:schema>
+	</wsdl:types>
+
+	<wsdl:message name="testServiceOperationRequest">
+		<wsdl:part name="parameters" element="tns:testServiceOperationRequest"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="testServiceOperationResponse">
+		<wsdl:part name="parameters" element="tns:testServiceOperationResponse"></wsdl:part>
+	</wsdl:message>
+
+	<wsdl:portType name="testServicePortType">
+		<wsdl:operation name="testServiceOperation">
+			<wsdl:input message="tns:testServiceOperationRequest"></wsdl:input>
+			<wsdl:output message="tns:testServiceOperationResponse"></wsdl:output>
+		</wsdl:operation>
+	</wsdl:portType>
+
+	<wsdl:binding name="testServiceBinding" type="tns:testServicePortType">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="testServiceOperation">
+			<soap:operation soapAction="http://www.talend.org/service/testServiceOperation" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+
+	<wsdl:service name="testService">
+		<wsdl:port name="testServicePort" binding="tns:testServiceBinding">
+			<soap:address location="http://localhost:8090/services/testService" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>
