@@ -1,0 +1,5 @@
+moment,runID,connection_node,project,job,log_type,origin,priority,status,description,error_code,row_count,row_processed,row_rejected
+"2019-07-25 16:57:27","f6aa5fd7-0a39-4c99-8b29-b7ae31285153","10676","CDP_HUX","GitTestJob","Statistics Log","","","begin","","","0","0","0"
+"2019-07-25 16:57:28","f6aa5fd7-0a39-4c99-8b29-b7ae31285153","10676","CDP_HUX","GitTestJob","Statistics Log","tJava_1","","begin","","","0","0","0"
+"2019-07-25 16:57:29","f6aa5fd7-0a39-4c99-8b29-b7ae31285153","10676","CDP_HUX","GitTestJob","Statistics Log","tJava_1","","end","success","","0","0","0"
+"2019-07-25 16:57:29","f6aa5fd7-0a39-4c99-8b29-b7ae31285153","10676","CDP_HUX","GitTestJob","Statistics Log","","","end","success","","0","0","0"
